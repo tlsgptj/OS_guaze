@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "server Build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lws2_32",
+                "-lpthreadVC2"
+            ],
+            "options": {
+                "cwd": "C:/Users/angel/OneDrive/바탕 화면/운영체제 과제 5월 17일/server_2.c"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+    
+           , "configurations": [
+                {
+                    "name": "windows",
+                    "includePath": [
+                        "${workspaceFolder}/**"
+                    ],
+                    "defines": [
+                        "_GNU_SOURCE"
+                    ],
+                    "compilerPath": "/usr/bin/gcc",
+                    "cStandard": "c11",
+                    "cppStandard": "c++17",
+                    "intelliSenseMode": "gcc-x64",
+                    "compilerArgs": [
+                        "-pthread"
+                    ]
+                }
+        ]
+    }
